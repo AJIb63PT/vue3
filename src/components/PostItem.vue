@@ -1,7 +1,16 @@
 <template>
   <div class="post">
-    <div><strong>title</strong>{{ post.title }}</div>
-    <div><strong>body</strong>{{ post.body }}</div>
+    <div>
+      <div>{{ post.id }}</div>
+      <div><strong>Название:</strong> {{ post.title }}</div>
+      <div><strong>Описание:</strong> {{ post.body }}</div>
+    </div>
+    <div class="post__btns">
+      <my-button @click="$router.push(`/posts/${post.id}`)">
+        Открыть
+      </my-button>
+      <my-button @click="$emit('remove', post)"> Удалить </my-button>
+    </div>
   </div>
 </template>
 
@@ -10,16 +19,22 @@ export default {
   props: {
     post: {
       type: Object,
-      requrired: true,
+      required: true,
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .post {
   padding: 15px;
   border: 2px solid teal;
   margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post__btns {
+  display: flex;
 }
 </style>
