@@ -1,11 +1,11 @@
 <template>
-  <h1>welcome</h1>
-  <router-link to="/about"> about</router-link>
-  <router-link to="/post"> posts</router-link>
+  <div>
+    <h1>Добро пожаловать на курс по Vue 3</h1>
+  </div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style></style>
+<style scoped></style>

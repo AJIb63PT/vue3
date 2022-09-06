@@ -4,12 +4,24 @@
     <router-view></router-view>
   </div>
 </template>
+
 <script>
-import Navbar from "./components/UI/Navbar.vue";
+import Navbar from "@/components/Navbar";
+
 export default {
-  componeNavbarnts: {
+  components: {
     Navbar,
   },
 };
 </script>
-<style></style>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  padding: 20px;
+}
+</style>

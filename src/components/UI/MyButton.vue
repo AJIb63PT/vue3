@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'my-button',
+  name: "my-button",
 };
 </script>
 
@@ -16,5 +16,7 @@ export default {
   background: none;
   color: teal;
   border: 1px solid teal;
+  margin: 10px;
+  cursor: pointer;
 }
 </style>
